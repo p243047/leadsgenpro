@@ -62,10 +62,22 @@ Extracts **8 Critical Columns** with high precision:
 
 ## 📋 Prerequisites
 
-- **Python 3.10 or higher**
+- **Python 3.10, 3.11, or 3.12** (Python 3.13 not fully supported due to greenlet compatibility)
 - **Operating System**: Windows 10+, macOS 10.15+, or Linux
 - **Internet Connection** required for scraping operations
 - **Display Server** (X11/Wayland on Linux) for GUI
+
+### ⚠️ Python Version Warning
+
+**Important**: This application requires Python 3.10-3.12. Python 3.13 is not yet fully supported due to breaking changes in the C API that affect the `greenlet` library (a dependency of async libraries).
+
+If you're using Python 3.13, please:
+1. Install Python 3.11 or 3.12 alongside your current version
+2. Create a virtual environment with the compatible version:
+   ```bash
+   python3.11 -m venv venv  # or python3.12
+   source venv/bin/activate
+   ```
 
 ---
 
